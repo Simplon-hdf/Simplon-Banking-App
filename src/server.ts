@@ -7,6 +7,7 @@ import { type Server } from "http";
 
 import config from "./config";
 import healthCheckRoute from "./routes/healthcheck";
+import createUserRoute from "./routes/user";
 
 const app = new Koa();
 
@@ -19,6 +20,8 @@ app.use(
     })
 );
 app.use( logger() );
+
+app.use( createUserRoute.routes() );
 
 app.use( healthCheckRoute.routes() );
 
