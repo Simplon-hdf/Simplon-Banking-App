@@ -1,5 +1,5 @@
 import { PrismaClient } from "@prisma/client";
-import { IUser } from "../../routes/createUser"
+import { IUser } from "../../routes/user"
 const prisma = new PrismaClient();
 
 const create = async ( data: IUser ) => {
