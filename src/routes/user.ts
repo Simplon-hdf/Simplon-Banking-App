@@ -1,44 +1,31 @@
-import { PrismaClient } from "@prisma/client";
 import Router from "koa-router";
-import createUser from "../models/user/create";
-import { findMany } from "../models/user/read";
+
+import { createUserController } from "../controllers/user";
+import { findManyUserController } from "../controllers/user";
+import { findUniqueUserController } from "../controllers/user";
+import { updateUserController } from "../controllers/user";
+import { deleteUserController } from "../controllers/user";
 
 
 const router = new Router();
 
-const prisma = new PrismaClient();
-
-export interface IUser {
-    username: string,
-    lastname: string,
-    phone_number: string,
-    role: string
-}
-
-// monsite.fr/user/get
-
 router.post( "home", "/user/add", async ( ctx: Router.IRouterContext ) => {
-    ctx.body = 'Create a new User';
-    createUser( ctx.request.body )
-    .catch( ( e: Error ) => {
-        throw e;
-    })
-    .finally( async () => {
-        console.log( ctx.request.body, " Finally");
-        await prisma.$disconnect;
-    });
+  ctx.body = await createUserController( ctx.request.body )
 });
 
 router.get( "home", "/user", async ( ctx: Router.IRouterContext ) => {
-    ctx.body = "a new User";
-    ctx.body = await findMany()
-    .catch( ( e: Error ) => {
-        throw e;
-    })
-    .finally( async () => {
-        console.log( ctx.body );
-        await prisma.$disconnect;
-    });
+  ctx.body = await findManyUserController()
 });
 
+router.get( "home", "/user/:id", async ( ctx: Router.IRouterContext ) => {
+  ctx.body = await findUniqueUserController(+ctx.params.id)
+});
+
+router.patch( "home", "/user/update/:id", async (ctx: Router.IRouterContext ) => {
+  ctx.body = await updateUserController(+ctx.params.id, ctx.request.body)
+});
+
+router.delete( "home", "/user/delete/:id", async (ctx: Router.IRouterContext ) => {
+  ctx.body = await deleteUserController(+ctx.params.id)
+});
 export default router;
