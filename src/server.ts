@@ -13,22 +13,22 @@ const app = new Koa();
 
 const PORT: string = config.port;
 
-app.use( bodyParser() );
-app.use(
+app
+  .use( bodyParser() )
+  .use(
     cors({
         origin: "*"
     })
-);
-app.use( logger() );
+)
+  .use( logger() )
+  .use( createUserRoute.routes() )
+  .use( healthCheckRoute.routes() )
 
-app.use( createUserRoute.routes() );
-
-app.use( healthCheckRoute.routes() );
-
-const server: Server = app
-.listen( PORT, async () => {
+const server: Server = 
+app
+  .listen( PORT, async () => {
     console.log(`Server listening on PORT : ${PORT}`);
-})
-.on( "error", (e: Error) => {
+  })
+  .on( "error", (e: Error) => {
     console.log( e );
-});
+  });

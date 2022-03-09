@@ -2,7 +2,7 @@
     "compilerOptions": {
       /* Language and Environment */
       "target": "es2021",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
-      "strict": true,
+     /* "strict": true,/*
       "sourceMap": true,
       "outDir": "dist",
       "lib": ["esnext"],
