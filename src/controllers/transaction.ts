@@ -1,7 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 
 import { ITransaction } from '../interface'
-import { create } from "../services/transaction";
+import { create, findMany } from "../services/transaction";
 
 const prisma = new PrismaClient();
 
@@ -22,5 +22,18 @@ export const createCrontroller = async ( data: ITransaction ) => {
             return 'Nouvelle transaction crée';
         }
         return 'Une erreur est survenue';
+    };
+};
+
+
+export const findManyController = async () => {
+    try {
+        return await findMany();
+    }
+    catch(err) {
+        throw err;    
+    }
+    finally{
+        prisma.$disconnect;
     };
 };
