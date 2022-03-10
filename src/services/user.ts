@@ -35,7 +35,7 @@ export const update = async (id : number, data: IUser) => {
 }
 
 export const deleteU = async (id : number) => {
-  const update = await prisma.user.delete({
+  const update = await prisma.user.delete({ // update? 👀
     where : {
         id
     }

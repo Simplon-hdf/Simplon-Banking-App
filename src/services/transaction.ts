@@ -35,3 +35,12 @@ export const update = async ( id: number, data: ITransaction ) => {
     });
     return await updated;
 }
+
+export const deleteTransac = async ( id: number ) => {
+    return await prisma.transaction
+    .delete({
+        where: {
+            id
+        }
+    });
+};

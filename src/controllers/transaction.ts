@@ -1,7 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 
 import { ITransaction } from '../interface'
-import { create, findMany, findUnique, update } from "../services/transaction";
+import { create, findMany, findUnique, update, deleteTransac } from "../services/transaction";
 
 const prisma = new PrismaClient();
 
@@ -69,4 +69,24 @@ export const updateController = async ( id:number, data: ITransaction ) => {
         }
         return 'Une erreur est survenue';
     };
+};
+
+export const deleteController = async ( id: number ) => {
+    let requestIsOk = false;
+    try {
+        await deleteTransac( id )
+        .then(() => {
+            requestIsOk = true;
+        });
+    }
+    catch( err ) {
+        throw err;
+    }
+    finally {
+        prisma.$disconnect;
+        if ( requestIsOk ) {
+            return 'Transaction supprimée';
+        }
+        return 'Une erreur est survenue';
+    }
 };
