@@ -1,0 +1,37 @@
+.header {
+    &__title {
+        width: 100%;
+       text-align: center;
+        font-size: 4rem;
+        text-shadow: red 2px 2px;
+        margin-bottom: 2rem;
+        text-transform: capitalize;
+    }
+    &__name {
+        text-align: center;
+        font-size: 1.5rem;
+        text-shadow: white 1px 1px;
+        margin-bottom: 2rem;
+        text-transform: capitalize;
+
+    }
+    &__separator {
+        width: 100%;
+        height: 2px;
+        margin: 2rem 0;
+        background: radial-gradient(white, transparent);
+    }
+    &__nav {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+    &__navlink {
+        text-transform: capitalize;
+        font-size: 1.5rem;
+        padding: 0 1rem;
+        text-align: center;
+    }
+
+}

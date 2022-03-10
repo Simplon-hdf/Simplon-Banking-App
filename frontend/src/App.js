@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState }from "react";
+import './styles.scss'
+import Header from "./componant/header";
+import AllAccount from "./componant/all_account";
+const App = () => {
+  const [dataUser, setDataUser] = useState()
+  const [admin, setAdmin] = useState(false)
+  const [dataAccount, setDataAccount] = useState()
+  useEffect(() => {
+    fetch("http://localhost:4000/user/101426")
+      .then( res => res.json())
+      .then((result => {
+        setDataUser(result)
+        if(result.role == "admin") {
+          setAdmin(true)
+        }
+        fetch(`http://localhost:4000/ownaccount/101426`)
+          .then( res => res.json())
+          .then((result) => setDataAccount(result))
+      })
+    )
+  }, [])
 
-function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+   <div className="container">
+      {dataUser && <Header firstName = {dataUser.username}  lastName = {dataUser.lastname} admin ={admin} />}
+      {dataAccount &&  <AllAccount  data={dataAccount}/>}
     </div>
   );
 }
+   
+
 
 export default App;
