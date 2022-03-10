@@ -42,5 +42,3 @@ model Transaction {
   sender          Account @relation(name:"sender", fields: [sender_id], references: [id])
   receiver        Account @relation(name:"receiver", fields: [receiver_id], references: [id])
 }
-
-
