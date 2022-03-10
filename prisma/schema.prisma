@@ -29,7 +29,7 @@ model Account {
   user_id         Int
   sender          Transaction[] @relation("sender")
   receiver        Transaction[] @relation("receiver")
-  users           User @relation(fields: [user_id], references: [id])
+  users           User @relation(fields: [user_id], references: [id], onDelete: Cascade)
 }
 
 model Transaction {
@@ -39,8 +39,8 @@ model Transaction {
   is_validate     Boolean @default(false)
   sender_id       Int
   receiver_id     Int
-  sender          Account @relation(name:"sender", fields: [sender_id], references: [id])
-  receiver        Account @relation(name:"receiver", fields: [receiver_id], references: [id])
+  sender          Account @relation(name:"sender", fields: [sender_id], references: [id], onDelete: Cascade)
+  receiver        Account @relation(name:"receiver", fields: [receiver_id], references: [id], onDelete: Cascade)
 }
 
 
