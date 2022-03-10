@@ -1,7 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 
 import { ITransaction } from '../interface'
-import { create, findMany, findUnique } from "../services/transaction";
+import { create, findMany, findUnique, update } from "../services/transaction";
 
 const prisma = new PrismaClient();
 
@@ -27,6 +27,7 @@ export const createCrontroller = async ( data: ITransaction ) => {
 
 
 export const findManyController = async () => {
+    let requestIsOk = false;
     try {
         return await findMany();
     }
@@ -47,5 +48,25 @@ export const findUniqueController = async ( id:number ) => {
     }
     finally{
         prisma.$disconnect;
+    };
+};
+
+export const updateController = async ( id:number, data: ITransaction ) => {
+    let requestIsOk = false;
+    try {
+        await update( id, data )
+        .then(() => {
+            requestIsOk = true;
+        });
+    }
+    catch(err) {
+        throw err;    
+    }
+    finally{
+        prisma.$disconnect;
+        if ( requestIsOk ) {
+            return 'Transaction mise à jour';
+        }
+        return 'Une erreur est survenue';
     };
 };

@@ -24,3 +24,14 @@ export const findUnique = async ( id: number ) => {
     });
     return await allTansactions;
 }
+
+export const update = async ( id: number, data: ITransaction ) => {
+    const updated = await prisma.transaction
+    .update({
+        where: {
+            id
+        },
+        data
+    });
+    return await updated;
+}
