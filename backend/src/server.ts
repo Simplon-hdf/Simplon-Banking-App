@@ -21,19 +21,11 @@ app
     })
 )
   .use( logger() )
-<<<<<<< HEAD:src/server.ts
-  .use( createUserRoute.routes() )
-  .use( healthCheckRoute.routes() )
-
-const server: Server = 
-app
-=======
   .use( UserRoute.routes())
   .use(AccountRoute.routes())
   .use( healthCheckRoute.routes() )
 
 const server: Server = app
->>>>>>> 8e60434b0d74881d601e974481d815540afc12a1:backend/src/server.ts
   .listen( PORT, async () => {
     console.log(`Server listening on PORT : ${PORT}`);
   })
