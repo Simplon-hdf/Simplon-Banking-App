@@ -1,15 +1,26 @@
 {
     "compilerOptions": {
-      /* Language and Environment */
-      "target": "es2021",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+      "target": "es5",
+      "lib": [
+        "dom",
+        "dom.iterable",
+        "esnext"
+      ],
+      "allowJs": true,
+      "skipLibCheck": true,
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
       "strict": true,
-      "sourceMap": true,
-      "outDir": "dist",
-      "lib": ["esnext"],
-      /* Modules */
-      "module": "commonjs",                                   /* Specify what module code is generated. */
-      "esModuleInterop": true                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility. */
+      "forceConsistentCasingInFileNames": true,
+      "noFallthroughCasesInSwitch": true,
+      "module": "esnext",
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "noEmit": true,
+      "jsx": "react-jsx"
     },
-    "include": ["src/**/*"],
-    "exclude": ["node_modules", "__tests__/**/*"]
+    "include": [
+      "src"
+    ]
   }
