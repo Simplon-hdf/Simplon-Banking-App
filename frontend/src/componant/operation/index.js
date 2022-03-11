@@ -2,9 +2,9 @@ import React from "react";
 import Retry_add from "./rety_add_monnay";
 import './styles.scss'
 
-const Operation = () => (
+const Operation = ({dataAccount}) => (
     <div className="operation">
-        <Retry_add />
+        <Retry_add  dataAccount={dataAccount}/>
         <div className="operation__separator" />
     </div>
 )

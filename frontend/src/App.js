@@ -25,7 +25,7 @@ const App = () => {
   return (
    <div className="container">
       {dataUser && <Header firstName = {dataUser.username}  lastName = {dataUser.lastname} admin ={admin} />}
-      {dataAccount && <Operation />}
+      {dataAccount && <Operation  dataAccount={dataAccount}/>}
       {dataAccount &&  <AllAccount  data={dataAccount}/>}
     </div>
   );
