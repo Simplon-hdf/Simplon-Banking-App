@@ -1,0 +1,48 @@
+.allAccount {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   width: 100%;
+}
+
+.card {
+    width: 70%;
+    padding: 1rem;
+    color: rgb(36, 36, 36);
+    border: 1px solid black;
+    text-transform: capitalize;
+    margin: 1rem 0;
+
+    &:hover {
+        color: rgb(36, 36, 36);
+    }
+    &__accountName, &__balance {
+        display: flex;
+    }
+    &__accountNumber {
+        text-align: center;
+        font-size: 1.5rem;
+        text-shadow: black 1px 1px;
+        color: red;
+        margin-bottom: 1rem;
+    }
+    &__username {
+        width: 70%;
+        text-align: center;
+    }
+    &__balanceN--red{
+        width: 70%;
+        text-align: center;
+        color: red;
+    }
+    &__balanceN--green{
+        width: 70%;
+        text-align: center;
+        color: green;
+    }
+    
+
+}
+p {
+    width: 30%;
+}

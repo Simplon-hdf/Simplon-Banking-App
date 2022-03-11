@@ -7,10 +7,10 @@ import { type Server } from "http";
 
 import config from "./config";
 import healthCheckRoute from "./routes/healthcheck";
-import createUserRoute from "./routes/user";
+import UserRoute from "./routes/user";
+import AccountRoute from './routes/account'
 
 const app = new Koa();
-
 const PORT: string = config.port;
 
 app
@@ -21,11 +21,19 @@ app
     })
 )
   .use( logger() )
+<<<<<<< HEAD:src/server.ts
   .use( createUserRoute.routes() )
   .use( healthCheckRoute.routes() )
 
 const server: Server = 
 app
+=======
+  .use( UserRoute.routes())
+  .use(AccountRoute.routes())
+  .use( healthCheckRoute.routes() )
+
+const server: Server = app
+>>>>>>> 8e60434b0d74881d601e974481d815540afc12a1:backend/src/server.ts
   .listen( PORT, async () => {
     console.log(`Server listening on PORT : ${PORT}`);
   })
