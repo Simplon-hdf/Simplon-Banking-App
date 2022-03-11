@@ -11,29 +11,26 @@ export const create = async ( data: ITransaction ) => {
 }
 
 export const findMany = async () => {
-    const allTansactions = await prisma.transaction.findMany();
-    return await allTansactions;
+    return await prisma.transaction.findMany();
 }
 
 export const findUnique = async ( id: number ) => {
-    const allTansactions = await prisma.transaction
+    return await prisma.transaction
     .findMany({
         where: {
             id
         }
     });
-    return await allTansactions;
 }
 
-export const update = async ( id: number, data: ITransaction ) => {
-    const updated = await prisma.transaction
+export const update = async ( id: number, data: ITransaction ) => { 
+    return await prisma.transaction
     .update({
         where: {
             id
         },
         data
     });
-    return await updated;
 }
 
 export const deleteTransac = async ( id: number ) => {
