@@ -6,8 +6,10 @@ import cors from "koa2-cors";
 import { type Server } from "http";
 
 import config from "./config";
+
 import healthCheckRoute from "./routes/healthcheck";
 import createUserRoute from "./routes/user";
+import transactionRoute from "./routes/transaction";
 
 const app = new Koa();
 const PORT: string = config.port;
@@ -21,6 +23,7 @@ app
 )
   .use( logger() )
   .use( createUserRoute.routes() )
+  .use( transactionRoute.routes() )
   .use( healthCheckRoute.routes() )
 
 const server: Server = app

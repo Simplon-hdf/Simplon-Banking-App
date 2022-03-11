@@ -1,6 +1,6 @@
 
 import { PrismaClient } from "@prisma/client";
-import {InterfaceUser } from '../interface'
+import { IUser } from '../interface'
 import { create } from "../services/user";
 import { findMany } from "../services/user";
 import { findUnique } from "../services/user";
@@ -9,7 +9,7 @@ import { deleteU } from "../services/user";
 
 const prisma = new PrismaClient();
 
-export const createUserController = async (data : InterfaceUser) => {
+export const createUserController = async (data :  IUser) => {
   await create(data)
 
   try {
@@ -49,7 +49,7 @@ export const findUniqueUserController = async (id : Number) => {
   };
 }
 
-export const updateUserController = async (id:number, data : InterfaceUser) => {
+export const updateUserController = async (id:number, data :  IUser) => {
   await update(id, data)
   try {
       return 'mise a jour effectuer'

@@ -1,6 +1,4 @@
-interface IConfig {
-    port: string
-}
+import { IConfig } from "./interface";
 
 const config: IConfig = {
     port: process.env.PORT || "3000"

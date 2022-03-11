@@ -1,8 +1,9 @@
 import { PrismaClient } from "@prisma/client";
-import { InterfaceUser } from "../interface";
+import { IUser } from "../interface";
+
 const prisma = new PrismaClient();
 
-export const create = async ( data: InterfaceUser ) => {
+export const create = async ( data: IUser ) => {
     await prisma.user.create({
        data
     });
@@ -23,7 +24,7 @@ export const findUnique = async (id: number) => {
   return await uniqueUsers;
 };
 
-export const update = async (id : number, data: InterfaceUser) => {
+export const update = async (id : number, data: IUser) => {
   const update = await prisma.user.update({
     data,
     where : {
@@ -34,7 +35,7 @@ export const update = async (id : number, data: InterfaceUser) => {
 }
 
 export const deleteU = async (id : number) => {
-  const update = await prisma.user.delete({
+  const update = await prisma.user.delete({ 
     where : {
         id
     }
