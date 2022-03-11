@@ -49,7 +49,11 @@ export const findUniqueUserController = async (id : Number) => {
   };
 }
 
+<<<<<<< HEAD:backend/src/controllers/user.ts
 export const updateUserController = async (id:number, data : IUser) => {
+=======
+export const updateUserController = async (id:number, data :  IUser) => {
+>>>>>>> 564f631d0f91bdf875073a8c25e973f9b19860ac:src/controllers/user.ts
   await update(id, data)
   try {
       return 'mise a jour effectuer'
