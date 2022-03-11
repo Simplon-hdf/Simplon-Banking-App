@@ -1,0 +1,167 @@
+<mxfile host="65bd71144e">
+    <diagram id="CgU4YgguUDoS9mzeGNfE" name="Page-1">
+        <mxGraphModel dx="1622" dy="206" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="37" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;gradientColor=#97d077;" vertex="1" parent="1">
+                    <mxGeometry x="860" y="361" width="20" height="129" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="Page gestion de compte" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#fad9d5;strokeColor=#ae4132;fontColor=#000000;strokeWidth=3;" vertex="1" parent="1">
+                    <mxGeometry x="420" y="40" width="100" height="640" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;" vertex="1" parent="2">
+                    <mxGeometry x="40" y="80" width="20" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;" vertex="1" parent="2">
+                    <mxGeometry x="40" y="120" width="20" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;" vertex="1" parent="2">
+                    <mxGeometry x="40" y="160" width="20" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="" style="shape=umlLifeline;participant=umlActor;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;verticalAlign=top;spacingTop=36;outlineConnect=0;strokeColor=#000000;strokeWidth=3;" vertex="1" parent="1">
+                    <mxGeometry x="260" y="40" width="20" height="640" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffcd28;strokeColor=#d79b00;gradientColor=#ffa500;" vertex="1" parent="3">
+                    <mxGeometry y="80" width="20" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffcd28;strokeColor=#d79b00;gradientColor=#ffa500;" vertex="1" parent="3">
+                    <mxGeometry y="120" width="20" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Enter receiver account ID" style="html=1;verticalAlign=bottom;endArrow=block;strokeWidth=2;fillColor=#ffcd28;strokeColor=#d79b00;gradientColor=#ffa500;labelBackgroundColor=none;fontColor=#000000;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="280" y="120" as="sourcePoint"/>
+                        <mxPoint x="460" y="120" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="390" y="120"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="7" value="Enter Amount" style="html=1;verticalAlign=bottom;endArrow=block;strokeWidth=2;fillColor=#ffcd28;strokeColor=#d79b00;gradientColor=#ffa500;labelBackgroundColor=none;fontColor=#000000;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="280" y="160" as="sourcePoint"/>
+                        <mxPoint x="460" y="160" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="390" y="160"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="13" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffcd28;strokeColor=#d79b00;gradientColor=#ffa500;" vertex="1" parent="1">
+                    <mxGeometry x="260" y="200" width="20" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="Submit" style="html=1;verticalAlign=bottom;endArrow=block;strokeWidth=2;fillColor=#ffcd28;strokeColor=#d79b00;gradientColor=#ffa500;labelBackgroundColor=none;fontColor=#000000;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="280" y="200" as="sourcePoint"/>
+                        <mxPoint x="460" y="200" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="390" y="200"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="16" value="Module virement" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#dae8fc;strokeColor=#6c8ebf;gradientColor=#7ea6e0;fontColor=#000000;strokeWidth=3;" vertex="1" parent="1">
+                    <mxGeometry x="620" y="40" width="100" height="640" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;gradientColor=#7ea6e0;" vertex="1" parent="16">
+                    <mxGeometry x="40" y="180" width="20" height="310" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="Check Amount" style="html=1;verticalAlign=bottom;endArrow=block;strokeWidth=2;fillColor=#fad9d5;strokeColor=#ae4132;labelBackgroundColor=none;fontColor=#000000;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="480" y="219.31" as="sourcePoint"/>
+                        <mxPoint x="660" y="219.31" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="590" y="219.31"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="21" value="Controller" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#d5e8d4;strokeColor=#82b366;gradientColor=#97d077;fontColor=#000000;strokeWidth=3;" vertex="1" parent="1">
+                    <mxGeometry x="820" y="40" width="100" height="640" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;gradientColor=#97d077;" vertex="1" parent="21">
+                    <mxGeometry x="40" y="200" width="20" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="" style="shape=umlDestroy;whiteSpace=wrap;html=1;strokeWidth=3;rounded=0;fontFamily=Helvetica;fontSize=12;strokeColor=#000000;" vertex="1" parent="21">
+                    <mxGeometry x="35" y="456" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="Check sender account fund&amp;nbsp;" style="html=1;verticalAlign=bottom;endArrow=block;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;gradientColor=#7ea6e0;labelBackgroundColor=none;fontColor=#000000;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="680" y="239.99999999999994" as="sourcePoint"/>
+                        <mxPoint x="860" y="239.99999999999994" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="790" y="240"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="26" value="Alt Check Amount" style="shape=umlFrame;tabWidth=110;tabHeight=30;tabPosition=left;html=1;boundedLbl=1;labelInHeader=1;width=140;height=30;fontColor=#000000;strokeColor=#000000;fillColor=none;container=0;" vertex="1" parent="1">
+                    <mxGeometry x="10" y="280" width="800" height="340" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="Account amount is OK" style="text;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry y="320" width="100" height="20" as="geometry">
+                        <mxPoint x="20" y="40" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="28" value="Account amount is  KO" style="line;strokeWidth=2;dashed=1;labelPosition=center;verticalLabelPosition=bottom;align=left;verticalAlign=top;spacingLeft=20;spacingTop=15;fontColor=#000000;labelBackgroundColor=none;strokeColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="10" y="430" width="800" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="Amount is substracts" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;labelBackgroundColor=none;fontColor=#000000;strokeWidth=2;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=#82b366;entryX=0.713;entryY=0.16;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="860" y="330" as="sourcePoint"/>
+                        <mxPoint x="680.4000000000001" y="330" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="36" value="ADD amount to reveiver account" style="html=1;verticalAlign=bottom;endArrow=block;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;gradientColor=#7ea6e0;labelBackgroundColor=none;fontColor=#000000;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="680" y="360" as="sourcePoint"/>
+                        <mxPoint x="860" y="360" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="790" y="360"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="39" value="Message Receiver&lt;br&gt;&amp;nbsp;Account Is Credited" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;labelBackgroundColor=none;fontColor=#000000;strokeWidth=2;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=#82b366;exitX=0;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1">
+                    <mxGeometry x="0.5263" relative="1" as="geometry">
+                        <mxPoint x="860" y="390" as="sourcePoint"/>
+                        <mxPoint x="480" y="390" as="targetPoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="41" value="Insufficient amount" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;labelBackgroundColor=none;fontColor=#000000;strokeWidth=2;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=#82b366;entryX=1;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="858" y="490" as="sourcePoint"/>
+                        <mxPoint x="680" y="490" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="45" value="Return Message Amount ERROR" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;labelBackgroundColor=none;fontColor=#000000;strokeWidth=2;fillColor=#dae8fc;gradientColor=#7ea6e0;strokeColor=#6c8ebf;exitX=0;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="660" y="530" as="sourcePoint"/>
+                        <mxPoint x="482" y="530" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="49" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;" vertex="1" parent="1">
+                    <mxGeometry x="460" y="390" width="20" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="Clear Inputs" style="html=1;verticalAlign=bottom;endArrow=block;strokeWidth=2;fillColor=#fad9d5;strokeColor=#ae4132;labelBackgroundColor=none;fontColor=#000000;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="49">
+                    <mxGeometry x="0.0526" y="40" width="80" relative="1" as="geometry">
+                        <mxPoint x="480" y="550" as="sourcePoint"/>
+                        <mxPoint x="660" y="550" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="550" y="550"/>
+                            <mxPoint x="550" y="570"/>
+                            <mxPoint x="550" y="600"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="55" value="&amp;nbsp;" style="html=1;verticalAlign=bottom;endArrow=block;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;gradientColor=#7ea6e0;labelBackgroundColor=none;fontColor=#000000;entryX=0.371;entryY=0.498;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="680" y="511" as="sourcePoint"/>
+                        <mxPoint x="866.1299999999999" y="510.93999999999994" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="790" y="511"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
