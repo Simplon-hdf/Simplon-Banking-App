@@ -17,3 +17,10 @@ export interface IAccount {
     sender? :number,
     receiver?: number,
 }
+
+export interface ITransaction {
+    amount: number,
+    is_validate: boolean,
+    sender_id:   number,  
+    receiver_id: number
+}
