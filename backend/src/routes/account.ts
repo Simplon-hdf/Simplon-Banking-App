@@ -12,11 +12,11 @@ router.post( "account", "/account/add", async ( ctx: Router.IRouterContext ) => 
   ctx.body = await createAccountController( ctx.request.body )
 });
 
-router.get( "account", "/account/:id?/", async ( ctx: Router.IRouterContext ) => {
+router.get( "account", "/ownaccount/:id", async ( ctx: Router.IRouterContext ) => {
 ctx.body = await findManyAccountController(+ctx.params.id)
 });
 
-router.get( "account", "/account/:id/", async ( ctx: Router.IRouterContext ) => {
+router.get( "account", "/account/:id", async ( ctx: Router.IRouterContext ) => {
   ctx.body = await findUniqueAccountController(+ctx.params.id)
   });
 

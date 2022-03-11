@@ -3,11 +3,11 @@ import Card from "./card";
 import './styles.scss';
 
 const AllAccount = ({ data }) => (
-    <div className="allAcount">
+    <div className="allAccount">
       {
-          data.map((accountDetail) => (
-              <Card data={accountDetail} key={accountDetail.id}/>
-          ))
+        data.map((accountDetail) => (
+          <Card data={accountDetail} key={accountDetail.id}/>
+        ))
       }
     </div>
 );

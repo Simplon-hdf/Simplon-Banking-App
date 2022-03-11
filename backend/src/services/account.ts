@@ -18,9 +18,18 @@ export const create = async ( data: any ) => {
 }
 
 export const findMany = async ( id : number) => {
+  console.log(id)
  const findAllAccount = await prisma.account.findMany({
     where : {
       user_id : id
+    },
+    include: {
+     users : {
+       select: {
+         username: true,
+         lastname: true
+       }
+     }
     }
   });
   return await findAllAccount;

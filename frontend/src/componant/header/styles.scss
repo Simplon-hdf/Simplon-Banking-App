@@ -1,8 +1,9 @@
 .header {
     &__title {
         width: 100%;
-       text-align: center;
+        text-align: center;
         font-size: 4rem;
+        font-weight: bolder;
         text-shadow: red 2px 2px;
         margin-bottom: 2rem;
         text-transform: capitalize;
@@ -21,17 +22,14 @@
         margin: 2rem 0;
         background: radial-gradient(white, transparent);
     }
-    &__nav {
+    &__admin {
         width: 100%;
-        margin: auto;
-        display: flex;
-        justify-content: center;
+       text-align: center;
+       font-size: 1.5rem;
+       font-weight: bolder;
+       text-shadow: red 1px 1px;
+        
     }
-    &__navlink {
-        text-transform: capitalize;
-        font-size: 1.5rem;
-        padding: 0 1rem;
-        text-align: center;
-    }
+   
 
 }
