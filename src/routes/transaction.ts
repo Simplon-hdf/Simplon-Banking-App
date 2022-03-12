@@ -14,8 +14,18 @@ router.get( '/transaction/history', async ( ctx: Router.IRouterContext ) => {
     ctx.body = await findManyController();
 });
 
-router.get( '/transaction/:id', async ( ctx: Router.IRouterContext ) => {
+router.get( '/transaction/:id', async ( ctx ) => {
     ctx.body = await findUniqueController( +ctx.params.id );
+    const data = ctx.body[0];
+    ctx.state = {
+        title: 'transaction'
+    };
+    await ctx.render( 'transacDetail', {
+        amount: data.amount,
+        sender: data.sender_id,
+        receiver: data.receiver_id,
+        date: data.date
+    });
 });
 
 router.patch( '/transaction/update/:id', async ( ctx: Router.IRouterContext ) => {
