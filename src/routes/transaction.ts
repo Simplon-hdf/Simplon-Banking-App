@@ -21,7 +21,14 @@ router.post( '/transaction/new', async ( ctx: Router.IRouterContext ) => {
         sender_id: +data.sender_id,
         receiver_id: +data.receiver_id
     });
-    ctx.redirect('/transaction'); // Change Redirection to "Transaction Validate Page"
+    ctx.redirect('/transaction/validate'); // Change Redirection to "Transaction Validate Page"
+});
+
+router.get('/transaction/validate', async ( ctx: Router.IRouterContext) => {
+    ctx.state = {
+        title: 'Transaction Validée'
+    };
+    await ctx.render('transactionValid');
 });
 
 router.get( '/transaction/history', async ( ctx: Router.IRouterContext ) => {
