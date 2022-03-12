@@ -27,7 +27,6 @@ export const createCrontroller = async ( data: ITransaction ) => {
 
 
 export const findManyController = async () => {
-    let requestIsOk = false;
     try {
         return await findMany();
     }

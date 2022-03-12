@@ -1,0 +1,20 @@
+doctype html
+html.no-js(lang="")
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="x-ua-compatible" content="ie=edge")
+        title History
+        meta(name="description" content="")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+
+        link(rel="apple-touch-icon" href="apple-touch-icon.png")
+        link(rel="stylesheet" href="style/main.css")
+
+    body
+        header
+            h1 Historique des transactions
+        main 
+            section.all-transactions
+                ul 
+                    each val in data
+                        li= "Sender: " + val.sender_id + " | Receiver " + val.receiver_id + " | Amount: " + val.amount

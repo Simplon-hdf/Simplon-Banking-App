@@ -3,7 +3,7 @@ html.no-js(lang="")
     head
         meta(charset="utf-8")
         meta(http-equiv="x-ua-compatible" content="ie=edge")
-        title Accounts
+        title Transaction
         meta(name="description" content="")
         meta(name="viewport" content="width=device-width, initial-scale=1")
 
@@ -12,6 +12,13 @@ html.no-js(lang="")
 
     body
         header
-            h1 Détail des transactions
+            h1 Détails des transactions
         main 
             section 
+                article.transac-info
+                    p.amount #{amount}
+                    p.sender #{sender}
+                    p.receiver #{receiver}
+                    p.date #{date}
+
+    
