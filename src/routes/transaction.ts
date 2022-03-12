@@ -12,6 +12,13 @@ router.post( '/transaction/new', async ( ctx: Router.IRouterContext ) => {
 
 router.get( '/transaction/history', async ( ctx: Router.IRouterContext ) => {
     ctx.body = await findManyController();
+    const data = ctx.body;
+    ctx.state = {
+        title: 'transaction history'
+    };
+    await ctx.render( 'history', {
+        data
+    });
 });
 
 router.get( '/transaction/:id', async ( ctx ) => {

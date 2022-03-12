@@ -12,9 +12,9 @@ html.no-js(lang="")
 
     body
         header
-            h1 Détail des transactions
+            h1 Historique des transactions
         main 
-            section 
-
-
-    script( src="js/app.js");
+            section.all-transactions
+                ul 
+                    each val in data
+                        li= "Sender: " + val.sender_id + " | Receiver " + val.receiver_id + " | Amount: " + val.amount
