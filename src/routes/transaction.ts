@@ -6,8 +6,22 @@ import { ITransaction } from "../interface";
 
 const router = new Router();
 
+router.get( '/transaction', async ( ctx: Router.IRouterContext ) => {
+    ctx.state = {
+        title: 'Nouvelle Transaction'
+    };
+    await ctx.render( 'transaction' );
+});
+
 router.post( '/transaction/new', async ( ctx: Router.IRouterContext ) => {
-    ctx.body = await createCrontroller( ctx.request.body );
+    const data = ctx.request.body; // Data from Inputs
+    ctx.body = await createCrontroller({
+        amount: +data.amount,
+        is_validate: false,
+        sender_id: +data.sender_id,
+        receiver_id: +data.receiver_id
+    });
+    ctx.redirect('/transaction'); // Change Redirection to "Transaction Validate Page"
 });
 
 router.get( '/transaction/history', async ( ctx: Router.IRouterContext ) => {
