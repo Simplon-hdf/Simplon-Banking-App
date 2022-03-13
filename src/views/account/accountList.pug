@@ -12,6 +12,9 @@ html.no-js(lang="")
 
     body
         header
-            h1 Détail des transactions
+            h1 Compte principale
         main 
             section 
+            ul
+                each val in data
+                    li= "Identifiant: " + val.id + " | Solde : " + val.balance

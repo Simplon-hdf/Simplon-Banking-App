@@ -9,6 +9,12 @@ export interface IUser {
     role: string
 }
 
+export interface IAccount {
+    id: number,
+    balance: number,
+    user_id: number
+}
+
 export interface ITransaction {
     amount: number,
     is_validate: boolean,

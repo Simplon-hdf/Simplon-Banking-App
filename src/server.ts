@@ -9,13 +9,15 @@ import { type Server } from "http";
 
 import config from "./config";
 
-import healthCheckRoute from "./routes/healthcheck";
-import createUserRoute from "./routes/user";
-import transactionRoute from "./routes/transaction";
+import accountRoutes from "./routes/account";
+import healthCheckRoutes from "./routes/healthcheck";
+import userRoutes from "./routes/user";
+import transactionRoutes from "./routes/transaction";
 
 const app = new Koa();
 const PORT: string = config.port;
 
+// For Templating Engine
 app
   .use( serve( __dirname + '/static' ) )
   .use( views( __dirname + '/views', {
@@ -25,6 +27,7 @@ app
     }
   }));
 
+// All Requests
 app
   .use( bodyParser() )
   .use(
@@ -33,10 +36,12 @@ app
     })
   )
   .use( logger() )
-  .use( createUserRoute.routes() )
-  .use( transactionRoute.routes() )
-  .use( healthCheckRoute.routes() )
+  .use( accountRoutes.routes() )
+  .use( userRoutes.routes() )
+  .use( transactionRoutes.routes() )
+  .use( healthCheckRoutes.routes() );
 
+// Create And Launch a new Server
 const server: Server = app
   .listen( PORT, async () => {
     console.log(`Server listening on PORT : ${PORT}`);
