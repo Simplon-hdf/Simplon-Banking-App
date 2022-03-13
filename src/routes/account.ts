@@ -8,8 +8,9 @@ router.post( '/account/new', async ( ctx: IRouterContext ) => {
     ctx.body = await createController( ctx.request.body );
 });
 
-router.get( '/account/all', async ( ctx: IRouterContext ) => {
-    ctx.body = await findManyController();
+router.get( '/account/list/:user_id', async ( ctx: IRouterContext ) => {
+    const id = +ctx.params.user_id;
+    ctx.body = await findManyController( id );
 });
 
 router.get( '/account/:id', async ( ctx: IRouterContext ) => {

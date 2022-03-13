@@ -25,9 +25,9 @@ export const createController = async ( data: IAccount ) => {
     }
 }
 
-export const findManyController = async () => {
+export const findManyController = async ( id?: number ) => {
     try {
-        return await findMany();
+        return await findMany( id );
     }
     catch( err ) {
         console.error( err );

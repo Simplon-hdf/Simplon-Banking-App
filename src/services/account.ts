@@ -10,8 +10,15 @@ export const create = async ( data: IAccount ) => {
     });
 }
 
-export const findMany = async () => {
-    return await prisma.account.findMany();
+export const findMany = async ( id?: number ) => {
+    if ( typeof id !== undefined ) {
+        return await prisma.account
+        .findMany({
+            where: {
+                user_id: id
+            }
+        });
+    }
 }
 
 export const findUnique = async ( id: number ) => {

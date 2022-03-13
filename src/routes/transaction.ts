@@ -10,7 +10,7 @@ router.get( '/transaction', async ( ctx: Router.IRouterContext ) => {
     ctx.state = {
         title: 'Nouvelle Transaction'
     };
-    await ctx.render( 'transaction' );
+    await ctx.render( 'transaction/transaction' );
 });
 
 router.post( '/transaction/new', async ( ctx: Router.IRouterContext ) => {
@@ -28,7 +28,7 @@ router.get('/transaction/validate', async ( ctx: Router.IRouterContext) => {
     ctx.state = {
         title: 'Transaction Validée'
     };
-    await ctx.render('transactionValid');
+    await ctx.render('transaction/transactionValid');
 });
 
 router.get( '/transaction/history', async ( ctx: Router.IRouterContext ) => {
@@ -37,7 +37,7 @@ router.get( '/transaction/history', async ( ctx: Router.IRouterContext ) => {
     ctx.state = {
         title: 'transaction history'
     };
-    await ctx.render( 'history', {
+    await ctx.render( 'transaction/history', {
         data
     });
 });
@@ -48,7 +48,7 @@ router.get( '/transaction/:id', async ( ctx ) => {
     ctx.state = {
         title: 'transaction'
     };
-    await ctx.render( 'transacDetail', {
+    await ctx.render( 'transaction/transacDetail', {
         amount: data.amount,
         sender: data.sender_id,
         receiver: data.receiver_id,
@@ -60,11 +60,13 @@ router.patch( '/transaction/update/:id', async ( ctx: Router.IRouterContext ) =>
     const id: number = +ctx.params.id;
     const data: ITransaction = ctx.request.body;
     ctx.body = await updateController( id, data );
+    ctx.redirect('/account');
 });
 
 router.delete('/transaction/delete/:id', async ( ctx: Router.IRouterContext ) => {
     const id: number = +ctx.params.id;
     ctx.body = await deleteController( id );
-})
+    ctx.redirect('/account');
+});
 
 export default router;
