@@ -11,6 +11,13 @@ router.post( '/account/new', async ( ctx: IRouterContext ) => {
 router.get( '/account/list/:user_id', async ( ctx: IRouterContext ) => {
     const id = +ctx.params.user_id;
     ctx.body = await findManyController( id );
+    const data = ctx.body;
+    ctx.state = {
+        title: 'accounts list'
+    };
+    await ctx.render( 'account/accountList', {
+        data
+    });
 });
 
 router.get( '/account/:id', async ( ctx ) => {

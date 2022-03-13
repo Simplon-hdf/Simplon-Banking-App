@@ -3,7 +3,7 @@ html.no-js(lang="")
     head
         meta(charset="utf-8")
         meta(http-equiv="x-ua-compatible" content="ie=edge")
-        title Account
+        title Accounts
         meta(name="description" content="")
         meta(name="viewport" content="width=device-width, initial-scale=1")
 
@@ -15,7 +15,6 @@ html.no-js(lang="")
             h1 Compte principale
         main 
             section 
-            div
-                p Numéro de compte :  #{id}
-                p Solde : #{balance}
-                     
+            ul
+                each val in data
+                    li= "Identifiant: " + val.id + " | Solde : " + val.balance
