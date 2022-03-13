@@ -13,9 +13,16 @@ router.get( '/account/list/:user_id', async ( ctx: IRouterContext ) => {
     ctx.body = await findManyController( id );
 });
 
-router.get( '/account/:id', async ( ctx: IRouterContext ) => {
-    const id: number = +ctx.params.id;
-    ctx.body = await findUniqueController( id );
+router.get( '/account/:id', async ( ctx ) => {
+    ctx.body = await findUniqueController( +ctx.params.id );
+    const data = ctx.body;
+    ctx.state = {
+        title: 'account'
+    };
+    await ctx.render( 'account/account', {
+        id: data.id,
+        balance: data.balance
+    });
 });
 
 router.patch( '/account/update/:id', async ( ctx: IRouterContext ) => {
